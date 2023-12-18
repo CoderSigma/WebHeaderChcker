@@ -2,19 +2,19 @@ import requests as pla
 import argparse,os
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-u', '--url', help='url', required=True)
+parser.add_argument('-u', '--url', help='url example is https://site.com/', required=True)
 args = parser.parse_args()
 
-file = 'Header.txt'
+file = 'Header.json'
 r = pla.get(args.url)
 tt = str(r.headers)
-if os.path.exists('Header.txt'):
-    os.remove('Header.txt')
+if os.path.exists('Header.json'):
+    os.remove('Header.json')
 else:
     pass
 
-with open('Header.txt', 'a') as f:
-    f.write(tt)
+with open('Header.json', 'a') as f:
+    f.write(tt.replace(" ", '||\n||'))
     f.close()
 
     if os.path.exists(file):
