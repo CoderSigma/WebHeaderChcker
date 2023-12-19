@@ -15,6 +15,9 @@ git clone https://github.com/CoderSigma/WebHeaderChcker.git
 cd WebHeaderChcker
 ```
 ```
+pip install -r requirements.txt
+```
+```
 python3 main.py -h
 ```
 #### Example Usage
