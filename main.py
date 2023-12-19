@@ -3,5 +3,5 @@ import argparse,os
 from common.spec import kill
 
 
-if __main__ == '__name__':
+if __name__ == '__main__':
     kill()
